@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  @media print {
+    body {
+      background: white !important;
+      color: black !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Hide everything not in print view */
+    header, nav, footer, .print\\:hidden {
+      display: none !important;
+    }
+
+    #trade-license-paper {
+      width: 100% !important;
+      max-width: 100% !important;
+      border-width: 3px !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      padding: 10mm !important;
+      page-break-inside: avoid;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 8mm;
+    }
+  }
+}

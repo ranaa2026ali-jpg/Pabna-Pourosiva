@@ -1,0 +1,6 @@
+{
+  "name": "Pabna Pourashava e-Trade License Portal",
+  "description": "পাবনা পৌরসভা ই-ট্রেড লাইসেন্স আবেদন, ভেরিফিকেশন ও প্রিন্টিং পোর্টাল",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

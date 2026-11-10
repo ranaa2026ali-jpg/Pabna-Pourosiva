@@ -1,0 +1,98 @@
+{
+  "entities": {
+    "Application": {
+      "title": "Application",
+      "description": "Trade license application and issued certificate records for Pabna Pourashava",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "trackingNumber": { "type": "string" },
+        "businessName": { "type": "string" },
+        "businessNameEn": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "ownerNameEn": { "type": "string" },
+        "fatherOrHusbandName": { "type": "string" },
+        "fatherOrHusbandNameEn": { "type": "string" },
+        "motherName": { "type": "string" },
+        "motherNameEn": { "type": "string" },
+        "businessType": { "type": "string" },
+        "nidNumber": { "type": "string" },
+        "mobile": { "type": "string" },
+        "email": { "type": "string" },
+        "wardNo": { "type": "string" },
+        "holdingNo": { "type": "string" },
+        "businessAddress": { "type": "string" },
+        "businessAddressEn": { "type": "string" },
+        "permanentAddress": { "type": "string" },
+        "permanentAddressEn": { "type": "string" },
+        "securityHash": { "type": "string" },
+        "fiscalYear": { "type": "string" },
+        "capital": { "type": "number" },
+        "tradeFee": { "type": "number" },
+        "signboardTax": { "type": "number" },
+        "vat": { "type": "number" },
+        "serviceCharge": { "type": "number" },
+        "totalAmount": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "paymentMobile": { "type": "string" },
+        "trxId": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "status": { "type": "string" },
+        "licenseNo": { "type": "string" },
+        "issueDate": { "type": "string" },
+        "expiryDate": { "type": "string" },
+        "rejectionReason": { "type": "string" },
+        "ownerPhotoUrl": { "type": "string" },
+        "isRenewal": { "type": "boolean" },
+        "previousLicenseNo": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": [
+        "trackingNumber",
+        "businessName",
+        "ownerName",
+        "fatherOrHusbandName",
+        "motherName",
+        "businessType",
+        "nidNumber",
+        "mobile",
+        "wardNo",
+        "businessAddress",
+        "fiscalYear",
+        "totalAmount",
+        "status"
+      ]
+    },
+    "Setting": {
+      "title": "Setting",
+      "description": "Municipality portal configurations and payment receiver numbers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "bkashNumber": { "type": "string" },
+        "nagadNumber": { "type": "string" },
+        "rocketNumber": { "type": "string" },
+        "upayNumber": { "type": "string" },
+        "paymentInstructions": { "type": "string" },
+        "currentFiscalYear": { "type": "string" },
+        "mayorName": { "type": "string" },
+        "mayorDesignation": { "type": "string" },
+        "inspectorName": { "type": "string" },
+        "inspectorDesignation": { "type": "string" },
+        "helplineNumber": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/applications/{applicationId}": {
+      "schema": { "$ref": "#/entities/Application" },
+      "description": "Pabna Pourashava trade license applications and issued certificates"
+    },
+    "/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/Setting" },
+      "description": "Pabna Pourashava municipal portal settings and payment instructions"
+    }
+  }
+}
